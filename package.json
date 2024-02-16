@@ -1,0 +1,22 @@
+{
+  "name": "get-mime-type",
+  "version": "0.0.0",
+  "description": "Simple extension to mime-type",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/holepunchto/get-mime-type.git"
+  },
+  "author": "Holepunch Inc",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/holepunchto/get-mime-type/issues"
+  },
+  "homepage": "https://github.com/holepunchto/get-mime-type#readme",
+  "dependencies": {
+    "mime-db": "^1.52.0"
+  }
+}
