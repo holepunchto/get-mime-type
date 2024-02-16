@@ -398,7 +398,7 @@ const m = {
   lasxml: { type: 'application/vnd.las.las+xml', charset: null },
   lbd: { type: 'application/vnd.llamagraphics.life-balance.desktop', charset: null },
   lbe: { type: 'application/vnd.llamagraphics.life-balance.exchange+xml', charset: null },
-  '123': { type: 'application/vnd.lotus-1-2-3', charset: null },
+  123: { type: 'application/vnd.lotus-1-2-3', charset: null },
   apr: { type: 'application/vnd.lotus-approach', charset: null },
   pre: { type: 'application/vnd.lotus-freelance', charset: null },
   nsf: { type: 'application/vnd.lotus-notes', charset: null },
