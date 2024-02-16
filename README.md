@@ -8,10 +8,10 @@ npm install get-mime-type
 
 ## API
 
-#### `mime = getMimeType(name)`
+#### `mime = getMimeType(name, charset = true)`
 
-Get a mime object for a name or extension.
-Returns `null` if unknown, otherwise `{ type, charset }`
+Get a mime / content type for a name or extension.
+If charset is true (default) it adds the charset for known extensions
 
 ## License
 
