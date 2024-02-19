@@ -16,7 +16,7 @@
     "url": "https://github.com/holepunchto/get-mime-type/issues"
   },
   "homepage": "https://github.com/holepunchto/get-mime-type#readme",
-  "dependencies": {
+  "devDependencies": {
     "mime-db": "^1.52.0"
   }
 }
