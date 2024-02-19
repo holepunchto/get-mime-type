@@ -1,6 +1,6 @@
 {
   "name": "get-mime-type",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple extension to mime-type",
   "main": "index.js",
   "files": [
