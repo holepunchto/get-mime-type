@@ -1432,7 +1432,7 @@ m.mks = m.mkv
 m.asx = m.asf
 
 module.exports = function getMimeType (name, charset = true) {
-  const e = m[name.slice(name.lastIndexOf('.') + 1)]
+  const e = m[name.slice(name.lastIndexOf('.') + 1).toLowerCase()]
   if (!e) return null
   return e.type + (charset && e.charset ? '; charset=' + e.charset : '')
 }
