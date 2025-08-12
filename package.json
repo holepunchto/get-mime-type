@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/holepunchto/get-mime-type#readme",
   "devDependencies": {
-    "mime-db": "^1.52.0"
+    "mime-db": "^1.54.0"
   }
 }

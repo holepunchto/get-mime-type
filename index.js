@@ -1,6 +1,9 @@
 const m = {
   ez: { type: 'application/andrew-inset', charset: null },
+  appinstaller: { type: 'application/appinstaller', charset: null },
   aw: { type: 'application/applixware', charset: null },
+  appx: { type: 'application/appx', charset: null },
+  appxbundle: { type: 'application/appxbundle', charset: null },
   atom: { type: 'application/atom+xml', charset: null },
   atomcat: { type: 'application/atomcat+xml', charset: null },
   atomdeleted: { type: 'application/atomdeleted+xml', charset: null },
@@ -8,6 +11,8 @@ const m = {
   dwd: { type: 'application/atsc-dwd+xml', charset: null },
   held: { type: 'application/atsc-held+xml', charset: null },
   rsat: { type: 'application/atsc-rsat+xml', charset: null },
+  aml: { type: 'application/automationml-aml+xml', charset: null },
+  amlx: { type: 'application/automationml-amlx+zip', charset: null },
   bdoc: { type: 'application/bdoc', charset: null },
   xcs: { type: 'application/calendar+xml', charset: null },
   ccxml: { type: 'application/ccxml+xml', charset: null },
@@ -19,19 +24,21 @@ const m = {
   cdmiq: { type: 'application/cdmi-queue', charset: null },
   cpl: { type: 'application/cpl+xml', charset: null },
   cu: { type: 'application/cu-seeme', charset: null },
+  cwl: { type: 'application/cwl', charset: null },
   mpd: { type: 'application/dash+xml', charset: null },
   mpp: { type: 'application/dash-patch+xml', charset: null },
   davmount: { type: 'application/davmount+xml', charset: null },
+  dcm: { type: 'application/dicom', charset: null },
   dbk: { type: 'application/docbook+xml', charset: null },
   dssc: { type: 'application/dssc+der', charset: null },
   xdssc: { type: 'application/dssc+xml', charset: null },
-  es: { type: 'application/ecmascript', charset: null },
-  ecma: null,
+  ecma: { type: 'application/ecmascript', charset: null },
   emma: { type: 'application/emma+xml', charset: null },
   emotionml: { type: 'application/emotionml+xml', charset: null },
   epub: { type: 'application/epub+zip', charset: null },
   exi: { type: 'application/exi', charset: null },
   exp: { type: 'application/express', charset: null },
+  fdf: { type: 'application/fdf', charset: null },
   fdt: { type: 'application/fdt+xml', charset: null },
   pfr: { type: 'application/font-tdpfr', charset: null },
   geojson: { type: 'application/geo+json', charset: null },
@@ -51,7 +58,6 @@ const m = {
   ser: { type: 'application/java-serialized-object', charset: null },
   class: { type: 'application/java-vm', charset: null },
   js: { type: 'application/javascript', charset: 'UTF-8' },
-  mjs: null,
   json: { type: 'application/json', charset: 'UTF-8' },
   map: null,
   json5: { type: 'application/json5', charset: null },
@@ -80,8 +86,12 @@ const m = {
   mods: { type: 'application/mods+xml', charset: null },
   m21: { type: 'application/mp21', charset: null },
   mp21: null,
-  mp4s: { type: 'application/mp4', charset: null },
+  mp4: { type: 'application/mp4', charset: null },
+  mpg4: null,
+  mp4s: null,
   m4p: null,
+  msix: { type: 'application/msix', charset: null },
+  msixbundle: { type: 'application/msixbundle', charset: null },
   doc: { type: 'application/msword', charset: null },
   dot: null,
   mxf: { type: 'application/mxf', charset: null },
@@ -118,13 +128,15 @@ const m = {
   onetoc2: null,
   onetmp: null,
   onepkg: null,
+  one: null,
+  onea: null,
   oxps: { type: 'application/oxps', charset: null },
   relo: { type: 'application/p2p-overlay+xml', charset: null },
   xer: { type: 'application/patch-ops-error+xml', charset: null },
   pdf: { type: 'application/pdf', charset: null },
   pgp: { type: 'application/pgp-encrypted', charset: null },
   asc: { type: 'application/pgp-keys', charset: null },
-  sig: null,
+  sig: { type: 'application/pgp-signature', charset: null },
   prf: { type: 'application/pics-rules', charset: null },
   p10: { type: 'application/pkcs10', charset: null },
   p7m: { type: 'application/pkcs7-mime', charset: null },
@@ -142,6 +154,7 @@ const m = {
   ps: null,
   provx: { type: 'application/provenance+xml', charset: null },
   cww: { type: 'application/prs.cww', charset: null },
+  xsf: { type: 'application/prs.xsf+xml', charset: null },
   pskcxml: { type: 'application/pskc+xml', charset: null },
   raml: { type: 'application/raml+yaml', charset: null },
   rdf: { type: 'application/rdf+xml', charset: null },
@@ -177,6 +190,7 @@ const m = {
   smil: null,
   rq: { type: 'application/sparql-query', charset: null },
   srx: { type: 'application/sparql-results+xml', charset: null },
+  sql: { type: 'application/sql', charset: null },
   gram: { type: 'application/srgs', charset: null },
   grxml: { type: 'application/srgs+xml', charset: null },
   sru: { type: 'application/sru+xml', charset: null },
@@ -230,6 +244,7 @@ const m = {
   swi: { type: 'application/vnd.aristanetworks.swi', charset: null },
   iota: { type: 'application/vnd.astraea-software.iota', charset: null },
   aep: { type: 'application/vnd.audiograph', charset: null },
+  fbx: { type: 'application/vnd.autodesk.fbx', charset: null },
   bmml: { type: 'application/vnd.balsamiq.bmml+xml', charset: null },
   mpm: { type: 'application/vnd.blueice.multipass', charset: null },
   bmi: { type: 'application/vnd.bmi', charset: null },
@@ -263,6 +278,7 @@ const m = {
   dart: { type: 'application/vnd.dart', charset: null },
   rdz: { type: 'application/vnd.data-vision.rdz', charset: null },
   dbf: { type: 'application/vnd.dbf', charset: null },
+  dcmp: { type: 'application/vnd.dcmp+xml', charset: null },
   uvf: { type: 'application/vnd.dece.data', charset: null },
   uvvf: null,
   uvd: null,
@@ -293,7 +309,6 @@ const m = {
   et3: null,
   ez2: { type: 'application/vnd.ezpix-album', charset: null },
   ez3: { type: 'application/vnd.ezpix-package', charset: null },
-  fdf: { type: 'application/vnd.fdf', charset: null },
   mseed: { type: 'application/vnd.fdsn.mseed', charset: null },
   seed: { type: 'application/vnd.fdsn.seed', charset: null },
   dataless: null,
@@ -317,6 +332,7 @@ const m = {
   fzs: { type: 'application/vnd.fuzzysheet', charset: null },
   txd: { type: 'application/vnd.genomatix.tuxedo', charset: null },
   ggb: { type: 'application/vnd.geogebra.file', charset: null },
+  ggs: { type: 'application/vnd.geogebra.slides', charset: null },
   ggt: { type: 'application/vnd.geogebra.tool', charset: null },
   gex: { type: 'application/vnd.geometry-explorer', charset: null },
   gre: null,
@@ -325,10 +341,17 @@ const m = {
   g3w: { type: 'application/vnd.geospace', charset: null },
   gmx: { type: 'application/vnd.gmx', charset: null },
   gdoc: { type: 'application/vnd.google-apps.document', charset: null },
+  gdraw: { type: 'application/vnd.google-apps.drawing', charset: null },
+  gform: { type: 'application/vnd.google-apps.form', charset: null },
+  gjam: { type: 'application/vnd.google-apps.jam', charset: null },
+  gmap: { type: 'application/vnd.google-apps.map', charset: null },
   gslides: { type: 'application/vnd.google-apps.presentation', charset: null },
+  gscript: { type: 'application/vnd.google-apps.script', charset: null },
+  gsite: { type: 'application/vnd.google-apps.site', charset: null },
   gsheet: { type: 'application/vnd.google-apps.spreadsheet', charset: null },
   kml: { type: 'application/vnd.google-earth.kml+xml', charset: null },
   kmz: { type: 'application/vnd.google-earth.kmz', charset: null },
+  xdcf: { type: 'application/vnd.gov.sk.xmldatacontainer+xml', charset: null },
   gqf: { type: 'application/vnd.grafeq', charset: null },
   gqs: null,
   gac: { type: 'application/vnd.groove-account', charset: null },
@@ -398,7 +421,7 @@ const m = {
   lasxml: { type: 'application/vnd.las.las+xml', charset: null },
   lbd: { type: 'application/vnd.llamagraphics.life-balance.desktop', charset: null },
   lbe: { type: 'application/vnd.llamagraphics.life-balance.exchange+xml', charset: null },
-  123: { type: 'application/vnd.lotus-1-2-3', charset: null },
+  '123': { type: 'application/vnd.lotus-1-2-3', charset: null },
   apr: { type: 'application/vnd.lotus-approach', charset: null },
   pre: { type: 'application/vnd.lotus-freelance', charset: null },
   nsf: { type: 'application/vnd.lotus-notes', charset: null },
@@ -454,6 +477,7 @@ const m = {
   ppsm: { type: 'application/vnd.ms-powerpoint.slideshow.macroenabled.12', charset: null },
   potm: { type: 'application/vnd.ms-powerpoint.template.macroenabled.12', charset: null },
   mpt: null,
+  vdx: { type: 'application/vnd.ms-visio.viewer', charset: null },
   docm: { type: 'application/vnd.ms-word.document.macroenabled.12', charset: null },
   dotm: { type: 'application/vnd.ms-word.template.macroenabled.12', charset: null },
   wps: { type: 'application/vnd.ms-works', charset: null },
@@ -466,6 +490,7 @@ const m = {
   mus: { type: 'application/vnd.musician', charset: null },
   msty: { type: 'application/vnd.muvee.style', charset: null },
   taglet: { type: 'application/vnd.mynfc', charset: null },
+  bdo: { type: 'application/vnd.nato.bindingdataobject+xml', charset: null },
   nlu: { type: 'application/vnd.neurolanguage.nlu', charset: null },
   ntf: { type: 'application/vnd.nitf', charset: null },
   nitf: null,
@@ -523,9 +548,13 @@ const m = {
   plf: { type: 'application/vnd.pocketlearn', charset: null },
   pbd: { type: 'application/vnd.powerbuilder6', charset: null },
   box: { type: 'application/vnd.previewsystems.box', charset: null },
+  brushset: { type: 'application/vnd.procrate.brushset', charset: null },
+  brush: { type: 'application/vnd.procreate.brush', charset: null },
+  drm: { type: 'application/vnd.procreate.dream', charset: null },
   mgz: { type: 'application/vnd.proteus.magazine', charset: null },
   qps: { type: 'application/vnd.publishare-delta-tree', charset: null },
   ptid: { type: 'application/vnd.pvi.ptid1', charset: null },
+  xhtm: { type: 'application/vnd.pwg-xhtml-print+xml', charset: null },
   qxd: { type: 'application/vnd.quark.quarkxpress', charset: null },
   qxt: null,
   qwd: null,
@@ -602,11 +631,14 @@ const m = {
   umj: { type: 'application/vnd.umajin', charset: null },
   unityweb: { type: 'application/vnd.unity', charset: null },
   uoml: { type: 'application/vnd.uoml+xml', charset: null },
+  uo: null,
   vcx: { type: 'application/vnd.vcx', charset: null },
   vsd: { type: 'application/vnd.visio', charset: null },
   vst: null,
   vss: null,
   vsw: null,
+  vsdx: null,
+  vtx: null,
   vis: { type: 'application/vnd.visionary', charset: null },
   vsf: { type: 'application/vnd.vsf', charset: null },
   wbxml: { type: 'application/vnd.wap.wbxml', charset: 'UTF-8' },
@@ -649,6 +681,7 @@ const m = {
   aas: { type: 'application/x-authorware-seg', charset: null },
   bcpio: { type: 'application/x-bcpio', charset: null },
   torrent: { type: 'application/x-bittorrent', charset: null },
+  blend: { type: 'application/x-blender', charset: null },
   blb: { type: 'application/x-blorb', charset: null },
   blorb: null,
   bz: { type: 'application/x-bzip', charset: null },
@@ -705,6 +738,7 @@ const m = {
   hdf: { type: 'application/x-hdf', charset: null },
   php: { type: 'application/x-httpd-php', charset: null },
   install: { type: 'application/x-install-instructions', charset: null },
+  ipynb: { type: 'application/x-ipynb+json', charset: null },
   jardiff: { type: 'application/x-java-archive-diff', charset: null },
   jnlp: { type: 'application/x-java-jnlp-file', charset: null },
   kdbx: { type: 'application/x-keepass2', charset: null },
@@ -756,7 +790,6 @@ const m = {
   shar: { type: 'application/x-shar', charset: null },
   swf: { type: 'application/x-shockwave-flash', charset: null },
   xap: { type: 'application/x-silverlight-app', charset: null },
-  sql: { type: 'application/x-sql', charset: null },
   sit: { type: 'application/x-stuffit', charset: null },
   sitx: { type: 'application/x-stuffitx', charset: null },
   srt: { type: 'application/x-subrip', charset: null },
@@ -790,6 +823,7 @@ const m = {
   xlf: { type: 'application/x-xliff+xml', charset: null },
   xpi: { type: 'application/x-xpinstall', charset: null },
   xz: { type: 'application/x-xz', charset: null },
+  zip: { type: 'application/x-zip-compressed', charset: null },
   z1: { type: 'application/x-zmachine', charset: null },
   z2: null,
   z3: null,
@@ -822,8 +856,10 @@ const m = {
   xvm: null,
   yang: { type: 'application/yang', charset: null },
   yin: { type: 'application/yin+xml', charset: null },
-  zip: { type: 'application/zip', charset: null },
+  lottie: { type: 'application/zip+dotlottie', charset: null },
   '3gpp': { type: 'audio/3gpp', charset: null },
+  adts: { type: 'audio/aac', charset: null },
+  aac: null,
   adp: { type: 'audio/adpcm', charset: null },
   amr: { type: 'audio/amr', charset: null },
   au: { type: 'audio/basic', charset: null },
@@ -836,6 +872,7 @@ const m = {
   mp3: { type: 'audio/mp3', charset: null },
   m4a: { type: 'audio/mp4', charset: null },
   mp4a: null,
+  m4b: null,
   mpga: { type: 'audio/mpeg', charset: null },
   mp2: null,
   mp2a: null,
@@ -861,7 +898,6 @@ const m = {
   rip: { type: 'audio/vnd.rip', charset: null },
   wav: { type: 'audio/wav', charset: null },
   weba: { type: 'audio/webm', charset: null },
-  aac: { type: 'audio/x-aac', charset: null },
   aif: { type: 'audio/x-aiff', charset: null },
   aiff: null,
   aifc: null,
@@ -892,8 +928,10 @@ const m = {
   avcs: { type: 'image/avcs', charset: null },
   avif: { type: 'image/avif', charset: null },
   bmp: { type: 'image/bmp', charset: null },
+  dib: null,
   cgm: { type: 'image/cgm', charset: null },
   drle: { type: 'image/dicom-rle', charset: null },
+  dpx: { type: 'image/dpx', charset: null },
   fits: { type: 'image/fits', charset: null },
   g3: { type: 'image/g3fax', charset: null },
   gif: { type: 'image/gif', charset: null },
@@ -902,19 +940,22 @@ const m = {
   heif: { type: 'image/heif', charset: null },
   heifs: { type: 'image/heif-sequence', charset: null },
   hej2: { type: 'image/hej2k', charset: null },
-  hsj2: { type: 'image/hsj2', charset: null },
   ief: { type: 'image/ief', charset: null },
+  jaii: { type: 'image/jaii', charset: null },
+  jais: { type: 'image/jais', charset: null },
   jls: { type: 'image/jls', charset: null },
   jp2: { type: 'image/jp2', charset: null },
   jpg2: null,
-  jpeg: { type: 'image/jpeg', charset: null },
-  jpg: null,
+  jpg: { type: 'image/jpeg', charset: null },
+  jpeg: null,
   jpe: null,
   jph: { type: 'image/jph', charset: null },
   jhc: { type: 'image/jphc', charset: null },
   jpm: { type: 'image/jpm', charset: null },
+  jpgm: null,
   jpx: { type: 'image/jpx', charset: null },
   jpf: null,
+  jxl: { type: 'image/jxl', charset: null },
   jxr: { type: 'image/jxr', charset: null },
   jxra: { type: 'image/jxra', charset: null },
   jxrs: { type: 'image/jxrs', charset: null },
@@ -924,8 +965,10 @@ const m = {
   jxss: { type: 'image/jxss', charset: null },
   ktx: { type: 'image/ktx', charset: null },
   ktx2: { type: 'image/ktx2', charset: null },
+  jfif: { type: 'image/pjpeg', charset: null },
   png: { type: 'image/png', charset: null },
   btif: { type: 'image/prs.btif', charset: null },
+  btf: null,
   pti: { type: 'image/prs.pti', charset: null },
   sgi: { type: 'image/sgi', charset: null },
   svg: { type: 'image/svg+xml', charset: null },
@@ -963,6 +1006,7 @@ const m = {
   pcx: { type: 'image/vnd.zbrush.pcx', charset: null },
   webp: { type: 'image/webp', charset: null },
   '3ds': { type: 'image/x-3ds', charset: null },
+  dng: { type: 'image/x-adobe-dng', charset: null },
   ras: { type: 'image/x-cmu-raster', charset: null },
   cmx: { type: 'image/x-cmx', charset: null },
   fh: { type: 'image/x-freehand', charset: null },
@@ -990,19 +1034,30 @@ const m = {
   u8hdr: { type: 'message/global-headers', charset: null },
   eml: { type: 'message/rfc822', charset: null },
   mime: null,
+  mht: null,
+  mhtml: null,
   wsc: { type: 'message/vnd.wfa.wsc', charset: null },
   '3mf': { type: 'model/3mf', charset: null },
   gltf: { type: 'model/gltf+json', charset: null },
   glb: { type: 'model/gltf-binary', charset: null },
   igs: { type: 'model/iges', charset: null },
   iges: null,
+  jt: { type: 'model/jt', charset: null },
   msh: { type: 'model/mesh', charset: null },
   mesh: null,
   silo: null,
   mtl: { type: 'model/mtl', charset: null },
+  step: { type: 'model/step', charset: null },
+  stp: null,
+  stpnc: null,
+  p21: null,
+  '210': null,
   stpx: { type: 'model/step+xml', charset: null },
   stpz: { type: 'model/step+zip', charset: null },
   stpxz: { type: 'model/step-xml+zip', charset: null },
+  u3d: { type: 'model/u3d', charset: null },
+  bary: { type: 'model/vnd.bary', charset: null },
+  cld: { type: 'model/vnd.cld', charset: null },
   dae: { type: 'model/vnd.collada+xml', charset: null },
   dwf: { type: 'model/vnd.dwf', charset: null },
   gdl: { type: 'model/vnd.gdl', charset: null },
@@ -1011,7 +1066,10 @@ const m = {
   ogex: { type: 'model/vnd.opengex', charset: null },
   x_b: { type: 'model/vnd.parasolid.transmit.binary', charset: null },
   x_t: { type: 'model/vnd.parasolid.transmit.text', charset: null },
+  pyo: { type: 'model/vnd.pytha.pyox', charset: null },
+  pyox: null,
   vds: { type: 'model/vnd.sap.vds', charset: null },
+  usda: { type: 'model/vnd.usda', charset: null },
   usdz: { type: 'model/vnd.usdz+zip', charset: null },
   bsp: { type: 'model/vnd.valve.source.compiled-map', charset: null },
   vtu: { type: 'model/vnd.vtu', charset: null },
@@ -1035,10 +1093,11 @@ const m = {
   htm: null,
   shtml: null,
   jade: { type: 'text/jade', charset: null },
+  mjs: null,
   jsx: { type: 'text/jsx', charset: null },
   less: { type: 'text/less', charset: null },
-  markdown: { type: 'text/markdown', charset: null },
-  md: null,
+  md: { type: 'text/markdown', charset: null },
+  markdown: null,
   mml: { type: 'text/mathml', charset: null },
   mdx: { type: 'text/mdx', charset: null },
   n3: { type: 'text/n3', charset: 'UTF-8' },
@@ -1086,6 +1145,7 @@ const m = {
   wml: { type: 'text/vnd.wap.wml', charset: null },
   wmls: { type: 'text/vnd.wap.wmlscript', charset: null },
   vtt: { type: 'text/vtt', charset: 'UTF-8' },
+  wgsl: { type: 'text/wgsl', charset: null },
   s: { type: 'text/x-asm', charset: null },
   asm: null,
   c: { type: 'text/x-c', charset: null },
@@ -1126,13 +1186,12 @@ const m = {
   h264: { type: 'video/h264', charset: null },
   m4s: { type: 'video/iso.segment', charset: null },
   jpgv: { type: 'video/jpeg', charset: null },
-  jpgm: null,
   mj2: { type: 'video/mj2', charset: null },
   mjp2: null,
   ts: { type: 'video/mp2t', charset: null },
-  mp4: { type: 'video/mp4', charset: null },
+  m2t: null,
+  m2ts: null,
   mp4v: null,
-  mpg4: null,
   mpeg: { type: 'video/mpeg', charset: null },
   mpg: null,
   mpe: null,
@@ -1181,16 +1240,16 @@ const m = {
   ice: { type: 'x-conference/x-cooltalk', charset: null }
 }
 
-m.ecma = m.es
 m.inkml = m.ink
 m.war = m.jar
 m.ear = m.jar
-m.mjs = m.js
 m.map = m.json
 m.nb = m.ma
 m.mb = m.ma
 m.mp21 = m.m21
-m.m4p = m.mp4s
+m.mpg4 = m.mp4
+m.mp4s = m.mp4
+m.m4p = m.mp4
 m.dot = m.doc
 m.dms = m.bin
 m.lrf = m.bin
@@ -1216,7 +1275,8 @@ m.buffer = m.bin
 m.onetoc2 = m.onetoc
 m.onetmp = m.onetoc
 m.onepkg = m.onetoc
-m.sig = m.asc
+m.one = m.onetoc
+m.onea = m.onetoc
 m.p7c = m.p7m
 m.eps = m.ai
 m.ps = m.ai
@@ -1281,9 +1341,12 @@ m.sisx = m.sis
 m.cap = m.pcap
 m.dmp = m.pcap
 m.ufdl = m.ufd
+m.uo = m.uoml
 m.vst = m.vsd
 m.vss = m.vsd
 m.vsw = m.vsd
+m.vsdx = m.vsd
+m.vtx = m.vsd
 m.zirz = m.zir
 m.x32 = m.aab
 m.u32 = m.aab
@@ -1337,11 +1400,13 @@ m.xslt = m.xsl
 m.xhvml = m.mxml
 m.xvml = m.mxml
 m.xvm = m.mxml
+m.aac = m.adts
 m.snd = m.au
 m.midi = m.mid
 m.kar = m.mid
 m.rmi = m.mid
 m.mp4a = m.m4a
+m.m4b = m.m4a
 m.mp2 = m.mpga
 m.mp2a = m.mpga
 m.m2a = m.mpga
@@ -1353,10 +1418,13 @@ m.uvva = m.uva
 m.aiff = m.aif
 m.aifc = m.aif
 m.ra = m.ram
+m.dib = m.bmp
 m.jpg2 = m.jp2
-m.jpg = m.jpeg
-m.jpe = m.jpeg
+m.jpeg = m.jpg
+m.jpe = m.jpg
+m.jpgm = m.jpm
 m.jpf = m.jpx
+m.btf = m.btif
 m.svgz = m.svg
 m.tiff = m.tif
 m.uvvi = m.uvi
@@ -1369,9 +1437,16 @@ m.fh5 = m.fh
 m.fh7 = m.fh
 m.pct = m.pic
 m.mime = m.eml
+m.mht = m.eml
+m.mhtml = m.eml
 m.iges = m.igs
 m.mesh = m.msh
 m.silo = m.msh
+m.stp = m.step
+m.stpnc = m.step
+m.p21 = m.step
+m['210'] = m.step
+m.pyox = m.pyo
 m.vrml = m.wrl
 m.x3dbz = m.x3db
 m.x3dvz = m.x3dv
@@ -1381,7 +1456,8 @@ m.ifb = m.ics
 m.litcoffee = m.coffee
 m.htm = m.html
 m.shtml = m.html
-m.md = m.markdown
+m.mjs = m.js
+m.markdown = m.md
 m.text = m.txt
 m.conf = m.txt
 m.def = m.txt
@@ -1411,10 +1487,10 @@ m.f77 = m.f
 m.f90 = m.f
 m.pas = m.p
 m.yml = m.yaml
-m.jpgm = m.jpm
 m.mjp2 = m.mj2
+m.m2t = m.ts
+m.m2ts = m.ts
 m.mp4v = m.mp4
-m.mpg4 = m.mp4
 m.mpg = m.mpeg
 m.mpe = m.mpeg
 m.m1v = m.mpeg
