@@ -21,7 +21,7 @@ for (const [key, mime] of entries) {
     if (/(^\d)|[-]/.test(e0)) e0 = '\'' + e0 + '\''
     if (/(^\d)|[-]/.test(e)) e = '\'' + e + '\''
 
-    if (i === 0) s += '  ' + e + ': { type: \'' + key + '\', charset: ' + (mime.charset ? '\'' + mime.charset + '\'' : null) + ' }'
+    if (i === 0) s += '  ' + e + ': { type: \'' + key + '\', charset: ' + (mime.charset ? '\'' + mime.charset.toLowerCase() + '\'' : null) + ' }'
     else {
       s += '  ' + e + ': null'
       suf += 'm' + (e[0] === '\'' ? '[' + e + ']' : '.' + e) + (e0[0] === '\'' ? ' = m[' + e0 + ']' : ' = m.' + e0)
