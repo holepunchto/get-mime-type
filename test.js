@@ -6,7 +6,7 @@ test('null if no name', function (t) {
 
   const mimetype = getMimeType(name)
 
-  t.alike(mimetype, null)
+  t.is(mimetype, null)
 })
 
 test('application/octet-stream if no extension', function (t) {
@@ -14,7 +14,7 @@ test('application/octet-stream if no extension', function (t) {
 
   const mimetype = getMimeType(name)
 
-  t.alike(mimetype, 'application/octet-stream')
+  t.is(mimetype, 'application/octet-stream')
 })
 
 test('with charset', function (t) {
@@ -22,7 +22,7 @@ test('with charset', function (t) {
 
   const mimetype = getMimeType(name)
 
-  t.alike(mimetype, 'application/json; charset=utf-8')
+  t.is(mimetype, 'application/json; charset=utf-8')
 })
 
 test('without charset', function (t) {
@@ -30,7 +30,7 @@ test('without charset', function (t) {
 
   const mimetype = getMimeType(name, false)
 
-  t.alike(mimetype, 'application/json')
+  t.is(mimetype, 'application/json')
 })
 
 test('.js is text/javascript', function (t) {
@@ -38,7 +38,7 @@ test('.js is text/javascript', function (t) {
 
   const mimetype = getMimeType(name, false)
 
-  t.alike(mimetype, 'text/javascript')
+  t.is(mimetype, 'text/javascript')
 })
 
 test('.mjs is text/javascript', function (t) {
@@ -46,7 +46,7 @@ test('.mjs is text/javascript', function (t) {
 
   const mimetype = getMimeType(name, false)
 
-  t.alike(mimetype, 'text/javascript')
+  t.is(mimetype, 'text/javascript')
 })
 
 test('.cjs is text/javascript', function (t) {
@@ -54,5 +54,5 @@ test('.cjs is text/javascript', function (t) {
 
   const mimetype = getMimeType(name, false)
 
-  t.alike(mimetype, 'text/javascript')
+  t.is(mimetype, 'text/javascript')
 })
