@@ -32,3 +32,27 @@ test('without charset', function (t) {
 
   t.alike(mimetype, 'application/json')
 })
+
+test('.js is text/javascript', function (t) {
+  const name = 'sample.js'
+
+  const mimetype = getMimeType(name, false)
+
+  t.alike(mimetype, 'text/javascript')
+})
+
+test('.mjs is text/javascript', function (t) {
+  const name = 'sample.mjs'
+
+  const mimetype = getMimeType(name, false)
+
+  t.alike(mimetype, 'text/javascript')
+})
+
+test('.cjs is text/javascript', function (t) {
+  const name = 'sample.cjs'
+
+  const mimetype = getMimeType(name, false)
+
+  t.alike(mimetype, 'text/javascript')
+})

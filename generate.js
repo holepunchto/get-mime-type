@@ -1,5 +1,10 @@
 const db = require('mime-db')
-const map = {}
+
+const override = {
+  js: 'text/javascript',
+  cjs: 'text/javascript',
+  mjs: 'text/javascript'
+}
 
 let s = 'const m = {\n'
 
@@ -8,12 +13,16 @@ let suf = ''
 const entries = [...Object.entries(db)]
 const seen = new Set()
 
-for (const [key, mime] of entries) {
+for (let [key, mime] of entries) {
   if (!mime.extensions) continue
   const m = { type: key, charset: mime.charset || null }
   for (let i = 0; i < mime.extensions.length; i++) {
     let e0 = mime.extensions[0]
     let e = mime.extensions[i]
+
+    if (e in override) {
+      key = override[e]
+    }
 
     if (seen.has(e)) continue
     seen.add(e)
