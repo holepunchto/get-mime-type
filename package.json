@@ -6,6 +6,10 @@
   "files": [
     "index.js"
   ],
+  "scripts": {
+    "generate": "node generate.js",
+    "test": "brittle test.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/holepunchto/get-mime-type.git"
@@ -17,6 +21,7 @@
   },
   "homepage": "https://github.com/holepunchto/get-mime-type#readme",
   "devDependencies": {
-    "mime-db": "^1.54.0"
+    "mime-db": "^1.54.0",
+    "brittle": "^3.18.0"
   }
 }
