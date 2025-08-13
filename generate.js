@@ -1,9 +1,9 @@
 const db = require('mime-db')
 
 const override = {
-  js: 'application/javascript',
-  cjs: 'application/javascript',
-  mjs: 'application/javascript'
+  js: { type: 'application/javascript', charset: 'utf-8' },
+  cjs: { type: 'application/javascript', charset: 'utf-8' },
+  mjs: { type: 'application/javascript', charset: 'utf-8' }
 }
 
 let s = 'const m = {\n'
@@ -15,13 +15,15 @@ const seen = new Set()
 
 for (let [key, mime] of entries) {
   if (!mime.extensions) continue
-  const m = { type: key, charset: mime.charset || null }
+
   for (let i = 0; i < mime.extensions.length; i++) {
     let e0 = mime.extensions[0]
     let e = mime.extensions[i]
+    let charset = mime.charset
 
     if (e in override) {
-      key = override[e]
+      key = override[e].type
+      charset = override[e].charset
     }
 
     if (seen.has(e)) continue
@@ -30,7 +32,7 @@ for (let [key, mime] of entries) {
     if (/(^\d)|[-]/.test(e0)) e0 = '\'' + e0 + '\''
     if (/(^\d)|[-]/.test(e)) e = '\'' + e + '\''
 
-    if (i === 0) s += '  ' + e + ': { type: \'' + key + '\', charset: ' + (mime.charset ? '\'' + mime.charset.toLowerCase() + '\'' : null) + ' }'
+    if (i === 0) s += '  ' + e + ': { type: \'' + key + '\', charset: ' + (charset ? '\'' + charset.toLowerCase() + '\'' : null) + ' }'
     else {
       s += '  ' + e + ': null'
       suf += 'm' + (e[0] === '\'' ? '[' + e + ']' : '.' + e) + (e0[0] === '\'' ? ' = m[' + e0 + ']' : ' = m.' + e0)

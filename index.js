@@ -97,7 +97,7 @@ const m = {
   mxf: { type: 'application/mxf', charset: null },
   nq: { type: 'application/n-quads', charset: null },
   nt: { type: 'application/n-triples', charset: null },
-  cjs: { type: 'application/javascript', charset: null },
+  cjs: { type: 'application/javascript', charset: 'utf-8' },
   bin: { type: 'application/octet-stream', charset: null },
   dms: null,
   lrf: null,
