@@ -1,9 +1,9 @@
 const db = require('mime-db')
 
 const override = {
-  js: 'text/javascript',
-  cjs: 'text/javascript',
-  mjs: 'text/javascript'
+  js: 'application/javascript',
+  cjs: 'application/javascript',
+  mjs: 'application/javascript'
 }
 
 let s = 'const m = {\n'

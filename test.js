@@ -33,26 +33,26 @@ test('without charset', function (t) {
   t.is(mimetype, 'application/json')
 })
 
-test('.js is text/javascript', function (t) {
+test('.js is application/javascript', function (t) {
   const name = 'sample.js'
 
   const mimetype = getMimeType(name, false)
 
-  t.is(mimetype, 'text/javascript')
+  t.is(mimetype, 'application/javascript')
 })
 
-test('.mjs is text/javascript', function (t) {
+test('.mjs is application/javascript', function (t) {
   const name = 'sample.mjs'
 
   const mimetype = getMimeType(name, false)
 
-  t.is(mimetype, 'text/javascript')
+  t.is(mimetype, 'application/javascript')
 })
 
-test('.cjs is text/javascript', function (t) {
+test('.cjs is application/javascript', function (t) {
   const name = 'sample.cjs'
 
   const mimetype = getMimeType(name, false)
 
-  t.is(mimetype, 'text/javascript')
+  t.is(mimetype, 'application/javascript')
 })
