@@ -3,7 +3,8 @@ const db = require('mime-db')
 const override = {
   js: { type: 'application/javascript', charset: 'utf-8' },
   cjs: { type: 'application/javascript', charset: 'utf-8' },
-  mjs: { type: 'application/javascript', charset: 'utf-8' }
+  mjs: { type: 'application/javascript', charset: 'utf-8' },
+  mp4: { type: 'video/mp4' }
 }
 
 let s = 'const m = {\n'

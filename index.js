@@ -86,7 +86,7 @@ const m = {
   mods: { type: 'application/mods+xml', charset: null },
   m21: { type: 'application/mp21', charset: null },
   mp21: null,
-  mp4: { type: 'application/mp4', charset: null },
+  mp4: { type: 'video/mp4', charset: null },
   mpg4: null,
   mp4s: null,
   m4p: null,
